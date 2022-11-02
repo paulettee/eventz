@@ -1,0 +1,10 @@
+<h1>Registrations for <%= link_to @event.name, @event %> </h1>
+
+<%= render "shared/errors", object: @registration %>
+<%= form_with(model: [@event, @registration]) do |f| %>
+
+  <%= f.label :how_heard %>
+  <%= f.select :how_heard, Registration::HOW_HEARD_OPTIONS, prompt: "Pick one", autofocus: true %>
+
+  <%= f.submit %>
+<% end %>
