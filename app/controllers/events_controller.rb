@@ -63,7 +63,7 @@ private
   def event_params
     params.require(:event).
     permit(:name, :description, :location, :price, :starts_at,
-      :capacity, :image_file_name, category_ids: [])
+      :capacity, :main_image, category_ids: [])
   end
 
   def set_event

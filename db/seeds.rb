@@ -117,3 +117,20 @@ Event.create!([
     capacity: 25
   }
 ])
+
+
+[
+  ["BugSmash", "bugsmash.png"],
+  ["Hackathon", "hackathon.png"],
+  ["Kata Camp", "katacamp.png"],
+  ["Coffee 'n Code", "coffee-code.png"],
+  ["Rails User Group", "rails-user-group"],
+  ["Ruby User Group", "ruby-user-group"],
+  ["5-Minute Lightning Talks", "Lightning.png"],
+  ["Drone Zone", "drone-zone.png"],
+  ["Coding Ninjas", "ninjas.png"]
+].each do |event_name, file_name|
+  event = Event.find_by!(name: event_name)
+  file = File.open(Rails.root.join("app/assets/images/#{file_name}"))
+  event.main_image.attach(io: file, filename: file_name)
+end
