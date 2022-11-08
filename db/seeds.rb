@@ -124,9 +124,9 @@ Event.create!([
   ["Hackathon", "hackathon.png"],
   ["Kata Camp", "katacamp.png"],
   ["Coffee 'n Code", "coffee-code.png"],
-  ["Rails User Group", "rails-user-group"],
-  ["Ruby User Group", "ruby-user-group"],
-  ["5-Minute Lightning Talks", "Lightning.png"],
+  ["Rails User Group", "rails-user-group.png"],
+  ["Ruby User Group", "ruby-user-group.png"],
+  ["5-Minute Lightning Talks", "lightning.png"],
   ["Drone Zone", "drone-zone.png"],
   ["Coding Ninjas", "ninjas.png"]
 ].each do |event_name, file_name|
